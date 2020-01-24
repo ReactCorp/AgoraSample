@@ -27,9 +27,11 @@ class ViewController: UIViewController {
     
     func joinChannel() {
         agora = AgoraRtcEngineKit.sharedEngine(withAppId: <#APP_ID#>, delegate: self)
-        agora.setChannelProfile(.communication)
-        agora.setAudioProfile(.speechStandard, scenario: .gameStreaming)
         agora.setParameters("{\"che.audio.force.bluetooth.a2dp\":true}")
+        agora.setChannelProfile(.liveBroadcasting)
+        agora.setAudioProfile(.musicHighQualityStereo, scenario: .gameStreaming)
+        agora.setClientRole(.broadcaster)
+
         agora.joinChannel(byToken: nil, channelId: "demoChannel1", info: nil, uid: 0) { [weak self] (sid, uid, elapsed) in
             if let weakSelf = self {
                 weakSelf.label.text = "own uid: \(uid)"
