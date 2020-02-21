@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         agora.joinChannel(byToken: nil, channelId: "demoChannel1", info: nil, uid: 0) { [weak self] (sid, uid, elapsed) in
             if let weakSelf = self {
                 weakSelf.label.text = "own uid: \(uid)"
+                weakSelf.agora.setRemoteVoicePosition(uid, pan: 0, gain: 0.5)
             }
         }
     }
