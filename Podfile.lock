@@ -5,7 +5,7 @@ DEPENDENCIES:
   - AgoraRtcEngine_iOS (= 2.9.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AgoraRtcEngine_iOS
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 2f9c5fad6bab38146542fc901ff7fbc6ade2f30c
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.0
